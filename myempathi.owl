@@ -209,6 +209,9 @@
         <Class IRI="Home"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Hospital"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Human_Remains_Management"/>
     </Declaration>
     <Declaration>
@@ -309,9 +312,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="Organization"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OrganizationCategory"/>
     </Declaration>
     <Declaration>
         <Class IRI="People"/>
@@ -831,6 +831,10 @@
         <Class IRI="Infrastructure_Damage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Hospital"/>
+        <Class IRI="Facility"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Human_Remains_Management"/>
         <Class IRI="Service"/>
     </SubClassOf>
@@ -1235,10 +1239,6 @@
         <Class IRI="Service"/>
     </SubClassOf>
     <ClassAssertion>
-        <Class IRI="OrganizationCategory"/>
-        <NamedIndividual IRI="Hospital"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="Flood"/>
         <NamedIndividual IRI="Thunderstorm"/>
     </ClassAssertion>
@@ -1256,7 +1256,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation"/>
-        <Class IRI="OrganizationCategory"/>
+        <Class IRI="Hospital"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation"/>
@@ -1289,6 +1289,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/2012/2/Ontology1332984013898.owl#has_need"/>
         <Class IRI="Hazard_Type"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ma-ont#hasRating"/>
+        <Class IRI="Hospital"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="ageRange"/>
@@ -1343,8 +1347,12 @@
         <Class IRI="Modality_of_data"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
-        <DataProperty IRI="OrganizationName"/>
-        <Class IRI="OrganizationCategory"/>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/icontact.owl#hasPhoneNumber"/>
+        <Class IRI="Hospital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://rdfs.org/sioc/ns#id"/>
+        <Class IRI="Hospital"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="number"/>
@@ -1352,8 +1360,16 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="title"/>
+        <Class IRI="Hospital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="title"/>
         <Class IRI="Organization"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/icontact.owl#hasPhoneNumber"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="OrganizationName"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
@@ -3466,6 +3482,11 @@ Irregular rain fall or downpour due to shifting of cloud cause by hurricane.</Li
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Hospital</IRI>
+        <Literal>Hospital</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Human_Remains_Management</IRI>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">bodies recovered</Literal>
     </AnnotationAssertion>
@@ -4199,16 +4220,6 @@ information to the masses. This role becomes crucial when it comes to reporting 
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
         <IRI>Organization</IRI>
         <Literal>Disaster management is a complex process involving international, national and local organisations each with a distinct role to play. To respond to disaster situations a coordinated effort is required.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>OrganizationCategory</IRI>
-        <Literal>Category class for organizations</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OrganizationCategory</IRI>
-        <Literal>OrganizationCategory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
